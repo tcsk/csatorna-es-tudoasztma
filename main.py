@@ -27,4 +27,6 @@ plot.plot(asztma['ev'], asztma['asztmasokSzama'])
 plot.show()
 
 adatok = pan.concat([csatorna, asztma], axis = 1)
+adatok = pan.DataFrame({'Kozsegek': adatok['kozseg%'], 'Asztmasok': adatok['asztmasokSzama']})
+
 print(adatok)

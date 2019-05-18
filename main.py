@@ -15,4 +15,6 @@ plot.plot(csatorna['ev'], csatorna['kozseg%'])
 plot.show()
 
 asztma = pan.read_excel('./data/2_4_5i.xls', skiprows = [0, 1], sheet_name = '2.4.5.')
+asztma = asztma.drop(asztma.columns[[1, 2, 3, 4, 5, 6, 7, 9]], axis = 1)
+
 print(asztma)

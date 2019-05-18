@@ -25,3 +25,6 @@ plot.xlabel('Ev')
 plot.ylabel('Nyilvantartott tudoasztmasok szama')
 plot.plot(asztma['ev'], asztma['asztmasokSzama'])
 plot.show()
+
+adatok = pan.concat([csatorna, asztma], axis = 1)
+print(adatok)

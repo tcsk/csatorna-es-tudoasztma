@@ -28,5 +28,6 @@ plot.show()
 
 adatok = pan.concat([csatorna, asztma], axis = 1)
 adatok = pan.DataFrame({'Kozsegek': adatok['kozseg%'], 'Asztmasok': adatok['asztmasokSzama']})
-
 print(adatok)
+
+korr = adatok.corr()

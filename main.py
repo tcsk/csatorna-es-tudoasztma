@@ -31,3 +31,9 @@ adatok = pan.DataFrame({'Kozsegek': adatok['kozseg%'], 'Asztmasok': adatok['aszt
 print(adatok)
 
 korr = adatok.corr()
+print(korr)
+figure(num = None, figsize = (8, 8), dpi = 160, facecolor = 'w', edgecolor = 'k')
+plot.clf()
+plot.imshow(korr)
+plot.colorbar()
+plot.show()

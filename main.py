@@ -13,3 +13,6 @@ plot.xlabel('Ev')
 plot.ylabel('Kozuzemi szennyvizgyujto-halozattal ellatott kozsegi lakasok aranya [%]')
 plot.plot(csatorna['ev'], csatorna['kozseg%'])
 plot.show()
+
+asztma = pan.read_excel('./data/2_4_5i.xls', skiprows = [0, 1], sheet_name = '2.4.5.')
+print(asztma)

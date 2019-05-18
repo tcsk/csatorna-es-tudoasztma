@@ -17,5 +17,11 @@ plot.show()
 asztma = pan.read_excel('./data/2_4_5i.xls', skiprows = [0, 1], sheet_name = '2.4.5.')
 asztma = asztma.drop(asztma.columns[[1, 2, 3, 4, 5, 6, 7, 9]], axis = 1)
 asztma = asztma.rename(index = str, columns = {asztma.columns[0]: 'ev', asztma.columns[1]: 'asztmasokSzama'})
-
 print(asztma)
+
+figure(num = None, figsize = (8, 8), dpi = 80, facecolor = 'w', edgecolor = 'k')
+plot.clf()
+plot.xlabel('Ev')
+plot.ylabel('Nyilvantartott tudoasztmasok szama')
+plot.plot(asztma['ev'], asztma['asztmasokSzama'])
+plot.show()
